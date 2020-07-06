@@ -39,12 +39,13 @@ Panel::Panel(QWidget *parent)
 {
   Values & values = Values::get_instance();
   setWindowTitle("Population");
-  resize(values.get_map_width() * SCALE, values.get_map_height() * SCALE);
+  setFixedSize(values.get_map_width() * SCALE, values.get_map_height() * SCALE);
 
   connect(&exec_map, SIGNAL(finished()), this, SLOT(board_finished()));
 
   repainter.start();
   exec_map.start();
+  move(0, 0);
 }
 
 void Panel::closeEvent(QCloseEvent *)
@@ -74,7 +75,7 @@ void Panel::paintEvent(QPaintEvent *)
           default:
             painter.setBrush(Qt::black);
           }
-        painter.drawRect(i * SCALE, j * SCALE, SCALE, SCALE);
+        painter.drawRect(j * SCALE, i * SCALE, SCALE, SCALE);
     }
 }
 

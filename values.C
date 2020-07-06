@@ -25,11 +25,7 @@
 # include <values.H>
 # include <fstream>
 
-# define SIZE 100
-
 Values::Values()
-  : map_width(SIZE), map_height(SIZE), num_agents(SIZE * SIZE * 0.7),
-    tolerance(7), num_steps(1000000), refresh_time(2)
 {
   std::ifstream file("data.txt");
 

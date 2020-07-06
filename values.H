@@ -33,12 +33,12 @@ class Values : public Designar::Singleton<Values>
 
   static constexpr double OFF_SET = 0.7;
 
-  size_t map_width;
-  size_t map_height;
-  size_t num_agents;
-  size_t tolerance;
-  size_t num_steps;
-  size_t refresh_time;
+  size_t map_width = 150;
+  size_t map_height = 100;
+  size_t num_agents = map_width*map_height*0.7;
+  size_t tolerance = 7;
+  size_t num_steps = 1000000;
+  size_t refresh_time = 1;
 
 public:
   Values();

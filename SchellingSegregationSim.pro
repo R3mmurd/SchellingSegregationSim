@@ -25,7 +25,7 @@ QT += core widgets
 
 QMAKE_CXX = clang++
 
-INCLUDEPATH += ../DeSIGNAR/include
+INCLUDEPATH += ../DeSiGNAR/include
 
 CONFIG += c++14
 
@@ -39,3 +39,6 @@ SOURCES += \
     main.C \
     panel.C \
     board.C
+
+DISTFILES += \
+    data.txt
